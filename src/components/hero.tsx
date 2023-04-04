@@ -6,7 +6,7 @@ import Screenshot from "@/assets/dark-project-app-screenshot.png";
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative isolate overflow-hidden bg-gray-900">
+    <div className="relative isolate overflow-hidden bg-gray-900 h-screen">
       <svg
         className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
         aria-hidden="true"
@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
           <div className="mt-24 sm:mt-32 lg:mt-16">
             <a href="#" className="inline-flex space-x-6">
-              <span className="rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-500/20">
+              <span className="rounded-full bg-violet-500/10 px-3 py-1 text-sm font-semibold leading-6 text-violet-400 ring-1 ring-inset ring-violet-500/20">
                 What&apos;s new
               </span>
               <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-300">
@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
             </a>
           </div>
           <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
-            Maximize Your Profits: Real-Time Trading Insights
+            Maximize Your Profits: The World&apos;s Fastest Trading Insights
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Get the competitive edge with instant, customized notifications
@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
           <div className="mt-10 flex items-center gap-x-6">
             <a
               href="#"
-              className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+              className="rounded-md bg-violet-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-violet-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-400"
             >
               Get started
             </a>
