@@ -17,14 +17,24 @@ const navigation = [
 const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [headerTransparent, setHeaderTransparent] = useState(true);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.pageYOffset > 0) {
+      const scrollYThreshold = 100;
+      const scrollY = window.scrollY;
+
+      if (scrollY > scrollYThreshold) {
         setHeaderTransparent(false);
       } else {
         setHeaderTransparent(true);
       }
+
+      const scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      const scrolled = (scrollY / scrollHeight) * 100;
+      setScrollProgress(scrolled);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -37,9 +47,14 @@ const Navbar: React.FC = () => {
   return (
     <header
       className={`bg-gray-900 fixed z-40 top-0 inset-x-0 duration-500 ${
-        headerTransparent ? "bg-transparent" : "bg-gray-900"
+        headerTransparent ? "bg-transparent" : "bg-black/20 backdrop-blur-md"
       }`}
     >
+      <div
+        className="absolute bottom-0 h-1 w-full bg-violet-600"
+        style={{ width: `${scrollProgress}%` }}
+      />
+
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8"
         aria-label="Global"
@@ -64,7 +79,7 @@ const Navbar: React.FC = () => {
         <div className="flex flex-1 items-center justify-end gap-x-6">
           <a
             href="#"
-            className="rounded-md bg-violet-600 px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600"
+            className="rounded-md bg-violet-600 px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600 duration-300"
           >
             Dashboard
           </a>
@@ -97,7 +112,7 @@ const Navbar: React.FC = () => {
               href="#"
               className="ml-auto rounded-md bg-violet-600 px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600"
             >
-              Sign up
+              Dashboard
             </a>
             <button
               type="button"
@@ -120,14 +135,6 @@ const Navbar: React.FC = () => {
                     {item.name}
                   </a>
                 ))}
-              </div>
-              <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Log in
-                </a>
               </div>
             </div>
           </div>
