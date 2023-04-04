@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
         <div className="flex flex-1 items-center justify-end gap-x-6">
           <a
             href="#"
-            className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="rounded-md bg-violet-600 px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600"
           >
             Dashboard
           </a>
@@ -95,7 +95,7 @@ const Navbar: React.FC = () => {
             </a>
             <a
               href="#"
-              className="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="ml-auto rounded-md bg-violet-600 px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600"
             >
               Sign up
             </a>
