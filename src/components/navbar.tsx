@@ -16,19 +16,11 @@ const navigation = [
 
 const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [headerTransparent, setHeaderTransparent] = useState(true);
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollYThreshold = 100;
       const scrollY = window.scrollY;
-
-      if (scrollY > scrollYThreshold) {
-        setHeaderTransparent(false);
-      } else {
-        setHeaderTransparent(true);
-      }
 
       const scrollHeight =
         document.documentElement.scrollHeight -
@@ -46,12 +38,10 @@ const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`bg-gray-900 fixed z-40 top-0 inset-x-0 duration-500 ${
-        headerTransparent ? "bg-transparent" : "bg-black/20 backdrop-blur-md"
-      }`}
+      className={`absolute z-40 top-0 inset-x-0 duration-500 bg-transparent`}
     >
       <div
-        className="absolute bottom-0 h-1 w-full bg-violet-600"
+        className="fixed top-0 h-1 w-full bg-violet-700"
         style={{ width: `${scrollProgress}%` }}
       />
 
