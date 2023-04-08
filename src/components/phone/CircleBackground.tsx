@@ -1,13 +1,13 @@
-import { CircleBackgroundProps } from "@/types";
+import { CircleBackgroundProps } from "~/types";
 import { motion } from "framer-motion";
 import { useId } from "react";
 
-export function CircleBackground({
+const CircleBackground = ({
   color,
   width = 558,
   height = 558,
   ...props
-}: CircleBackgroundProps) {
+}: CircleBackgroundProps) => {
   let id = useId();
 
   return (
@@ -20,7 +20,7 @@ export function CircleBackground({
       {...props}
       initial={{ rotate: 0 }}
       animate={{ rotate: 360 }}
-      transition={{ repeat: Infinity, ease: "linear", duration: 20 }}
+      transition={{ repeat: Infinity, ease: "linear", duration: 10 }}
     >
       <defs>
         <linearGradient
@@ -47,4 +47,6 @@ export function CircleBackground({
       />
     </motion.svg>
   );
-}
+};
+
+export default CircleBackground;

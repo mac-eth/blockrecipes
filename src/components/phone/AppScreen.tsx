@@ -1,8 +1,13 @@
-import { HTMLAttributes, ReactNode, Ref, SVGProps, forwardRef } from "react";
+import React, { HTMLAttributes, ReactNode, Ref, forwardRef } from "react";
 
 import clsx from "clsx";
 
-function Logo(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+type AppScreenProps = {
+  children?: ReactNode;
+  className?: string;
+};
+
+const Logo = (props: AppScreenProps) => {
   return (
     <svg viewBox="0 0 79 24" fill="none" aria-hidden="true" {...props}>
       <path
@@ -15,9 +20,9 @@ function Logo(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
       />
     </svg>
   );
-}
+};
 
-function MenuIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+const MenuIcon = (props: AppScreenProps) => {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
       <path
@@ -29,9 +34,9 @@ function MenuIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
       />
     </svg>
   );
-}
+};
 
-function UserIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+const UserIcon = (props: AppScreenProps) => {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
       <path
@@ -43,16 +48,9 @@ function UserIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
       />
     </svg>
   );
-}
+};
 
-export function AppScreen({
-  children,
-  className,
-  ...props
-}: {
-  children: ReactNode;
-  className?: string;
-}) {
+const AppScreen = ({ children, className, ...props }: AppScreenProps) => {
   return (
     <div className={clsx("flex flex-col", className)} {...props}>
       <div className="flex justify-between px-4 pt-4">
@@ -63,7 +61,7 @@ export function AppScreen({
       {children}
     </div>
   );
-}
+};
 
 type Props = {
   children: React.ReactNode;
@@ -107,9 +105,7 @@ AppScreen.Subtitle = forwardRef(function AppScreenSubtitle(
 });
 
 AppScreen.Body = forwardRef<
-  // 1
   HTMLDivElement,
-  // 2
   HTMLAttributes<HTMLDivElement> & { children?: React.ReactNode }
 >(function AppScreenBody({ children, className }, ref) {
   return (
@@ -121,3 +117,5 @@ AppScreen.Body = forwardRef<
     </div>
   );
 });
+
+export default AppScreen;

@@ -1,6 +1,6 @@
 "use client";
 
-import type { Frequency, Tier } from "@/types";
+import type { Frequency, Tier } from "~/types";
 
 import { CheckIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
@@ -14,10 +14,10 @@ const frequencies: Frequency[] = [
 
 const tiers: Tier[] = [
   {
-    name: "Freelancer",
-    id: "tier-freelancer",
+    name: "Free Trial",
+    id: "tier-free",
     href: "#",
-    price: { monthly: 15, annually: 14 },
+    price: { monthly: 0, annually: 0 },
     description: "The essentials to provide your best work for clients.",
     features: [
       "5 products",
@@ -28,10 +28,10 @@ const tiers: Tier[] = [
     mostPopular: false,
   },
   {
-    name: "Startup",
-    id: "tier-startup",
+    name: "Pro",
+    id: "tier-pro",
     href: "#",
-    price: { monthly: 30, annually: 28 },
+    price: { monthly: 34, annually: 29 },
     description: "A plan that scales with your rapidly growing business.",
     features: [
       "25 products",
@@ -43,10 +43,10 @@ const tiers: Tier[] = [
     mostPopular: true,
   },
   {
-    name: "Enterprise",
-    id: "tier-enterprise",
+    name: "Expert",
+    id: "tier-expert",
     href: "#",
-    price: { monthly: 48, annually: 40 },
+    price: { monthly: 69, annually: 59 },
     description: "Dedicated support and infrastructure for your company.",
     features: [
       "Unlimited products",
@@ -65,22 +65,22 @@ function classNames(...classes: string[]) {
 }
 
 const Pricing: React.FC = () => {
-  const [frequency, setFrequency] = useState(frequencies[0]);
+  const [frequency, setFrequency] = useState(frequencies[1]);
 
   return (
-    <div className="bg-gray-900 py-24 sm:py-32">
+    <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-base font-semibold leading-7 text-violet-400">
             Pricing
           </h2>
           <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            Pricing plans for teams of&nbsp;all&nbsp;sizes
+            Dominate the Market with Tailored Pricing Plans
           </p>
         </div>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">
-          Choose an affordable plan that’s packed with the best features for
-          engaging your audience, creating customer loyalty, and driving sales.
+          Choose an affordable plan that’s packed with the best features
+          tailored for your trading level. No hidden fees, no surprises.
         </p>
         <div className="mt-16 flex justify-center">
           <RadioGroup
@@ -121,7 +121,7 @@ const Pricing: React.FC = () => {
               <div className="flex items-center justify-between gap-x-4">
                 <h3
                   id={tier.id}
-                  className="text-lg font-semibold leading-8 text-white"
+                  className="text-2xl font-semibold leading-8 text-white"
                 >
                   {tier.name}
                 </h3>
@@ -152,7 +152,7 @@ const Pricing: React.FC = () => {
                   "mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                 )}
               >
-                Buy plan
+                Get Started
               </a>
               <ul
                 role="list"

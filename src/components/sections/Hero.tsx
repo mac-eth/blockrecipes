@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
           <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
             Maximize Your Profits: The World&apos;s Fastest Trading Insights
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
+          <p className="mt-6 text-lg leading-8 text-gray-400">
             Get the competitive edge with instant, customized notifications
             tailored to you. BlockRecipes is the ultimate solution for real-time
             blockchain insights, never miss an opportunity and maximize your

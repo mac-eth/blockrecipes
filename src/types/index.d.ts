@@ -1,3 +1,16 @@
+export class CircleBackgroundProps {
+  color: string;
+  width?: number;
+  height?: number;
+  className?: string;
+}
+
+export class PhoneFrameProps {
+  priority?: boolean;
+  className?: string;
+  children: React.ReactNode;
+}
+
 export class Frequency {
   value: "monthly" | "annually";
   label: "Monthly" | "Annually";
