@@ -16,35 +16,11 @@ const navigation = [
 
 const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-
-      const scrollHeight =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      const scrolled = (scrollY / scrollHeight) * 100;
-      setScrollProgress(scrolled);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <header
       className={`absolute z-40 top-0 inset-x-0 duration-500 bg-transparent`}
     >
-      {/* <div
-        className="fixed top-0 h-1 w-full bg-violet-700"
-        style={{ width: `${scrollProgress}%` }}
-      /> */}
-
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8"
         aria-label="Global"
