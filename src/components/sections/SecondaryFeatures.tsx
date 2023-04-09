@@ -7,7 +7,7 @@ import {
   ServerIcon,
 } from "@heroicons/react/20/solid";
 
-import AppScreenshot from "@/assets/dark-project-app-screenshot.png";
+import AppScreenshot from "~/assets/dark-project-app-screenshot.png";
 import Image from "next/image";
 import React from "react";
 

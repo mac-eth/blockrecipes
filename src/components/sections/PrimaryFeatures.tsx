@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import React, { Fragment, RefObject, useEffect, useRef, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 
 import CircleBackground from "~/components/phone/CircleBackground";
 import Container from "~/components/layout/Container";
@@ -10,7 +10,7 @@ import DeviceTouchIcon from "~/components/phone/icons/DeviceTouchIcon";
 import DeviceUserIcon from "~/components/phone/icons/DeviceUserIcon";
 import InvestScreen from "~/components/phone/screens/InvestScreen";
 import InviteScreen from "~/components/phone/screens/InviteScreen";
-import { PhoneFrame } from "~/components/phone/PhoneFrame";
+import PhoneFrame from "~/components/phone/PhoneFrame";
 import StocksScreen from "~/components/phone/screens/StockScreen";
 import { Tab } from "@headlessui/react";
 import clsx from "clsx";
@@ -133,17 +133,23 @@ const FeaturesDesktop: React.FC = () => {
   );
 };
 
-const FeaturesMobile = () => {
+const FeaturesMobile: React.FC = () => {
   let [activeIndex, setActiveIndex] = useState(0);
-  let slideContainerRef = useRef();
-  let slideRefs = useRef([]);
+  let slideContainerRef = useRef<any>(null);
+  let slideRefs = useRef<any>([]);
 
   useEffect(() => {
+    if (!slideContainerRef.current) {
+      return;
+    }
+
     let observer = new window.IntersectionObserver(
       (entries: IntersectionObserverEntry[]) => {
         for (let entry of entries) {
           if (entry.isIntersecting) {
-            setActiveIndex(slideRefs.current.indexOf(entry.target));
+            setActiveIndex(
+              slideRefs.current.indexOf(entry.target as HTMLInputElement)
+            );
             break;
           }
         }
@@ -168,7 +174,7 @@ const FeaturesMobile = () => {
   return (
     <>
       <div
-        ref={slideContainerRef as unknown as RefObject<HTMLDivElement>}
+        ref={slideContainerRef}
         className="-mb-4 flex snap-x snap-mandatory -space-x-4 overflow-x-auto overscroll-x-contain scroll-smooth pb-4 [scrollbar-width:none] sm:-space-x-6 [&::-webkit-scrollbar]:hidden"
       >
         {features.map((feature, featureIndex) => (
@@ -232,19 +238,22 @@ const PrimaryFeatures: React.FC = () => {
       aria-label="Features for investing all your money"
       className="bg-gray-900 py-20 sm:py-32"
     >
-      <Container>
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
-          <h2 className="text-3xl font-medium tracking-tight text-white">
-            Every feature you need to win. Try it for yourself.
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl sm:text-center">
+          <h2 className="text-base font-semibold leading-7 text-violet-400">
+            Instant, Real-time Alerts
           </h2>
-          <p className="mt-2 text-lg text-gray-400">
-            Pocket was built for investors like you who play by their own rules
-            and aren’t going to let SEC regulations get in the way of their
-            dreams. If other investing tools are afraid to build it, Pocket has
-            it.
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Never Miss a Trading Opportunity
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Get ahead in trading with our reliable and efficient alert system,
+            delivering instant real-time notifications to ensure you never miss
+            an opportunity. Stay informed and seize every trading opportunity
+            with ease.
           </p>
         </div>
-      </Container>
+      </div>
       <div className="mt-16 md:hidden">
         <FeaturesMobile />
       </div>

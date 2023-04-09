@@ -14,7 +14,7 @@ const frequencies: Frequency[] = [
 
 const tiers: Tier[] = [
   {
-    name: "Free Trial",
+    name: "Free",
     id: "tier-free",
     href: "#",
     price: { monthly: 0, annually: 0 },

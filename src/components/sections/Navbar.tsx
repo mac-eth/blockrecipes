@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 
 import { Dialog } from "@headlessui/react";
 import Image from "next/image";
-import Logo from "@/assets/mark.svg";
+import Logo from "~/assets/mark.svg";
 
 const navigation = [
   { name: "Pricing", href: "#" },
@@ -40,10 +40,10 @@ const Navbar: React.FC = () => {
     <header
       className={`absolute z-40 top-0 inset-x-0 duration-500 bg-transparent`}
     >
-      <div
+      {/* <div
         className="fixed top-0 h-1 w-full bg-violet-700"
         style={{ width: `${scrollProgress}%` }}
-      />
+      /> */}
 
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8"

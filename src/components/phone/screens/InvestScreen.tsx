@@ -1,5 +1,4 @@
 import AppScreen from "~/components/phone/AppScreen";
-import React from "react";
 import bodyAnimation from "~/components/phone/animations/BodyAnimation";
 import headerAnimation from "~/components/phone/animations/HeaderAnimations";
 import { motion } from "framer-motion";

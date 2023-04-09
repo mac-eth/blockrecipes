@@ -1,7 +1,8 @@
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
+import Container from "~/components/layout/Container";
 import Image from "next/image";
 import React from "react";
-import Screenshot from "@/assets/dark-project-app-screenshot.png";
+import Screenshot from "~/assets/dark-project-app-screenshot.png";
 
 const Hero: React.FC = () => {
   return (
