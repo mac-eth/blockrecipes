@@ -1,51 +1,61 @@
+import CTAImage from "~/assets/ctaimage.avif";
+import Image from "next/image";
 import React from "react";
 
 const CTA: React.FC = () => {
   return (
-    <div className="relative isolate overflow-hidden bg-neutral-900">
-      <div className="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Boost your productivity.
-            <br />
-            Start using our app today.
+    <div className="relative bg-neutral-900">
+      <div className="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
+        <Image className="h-full w-full object-cover" src={CTAImage} alt="" />
+        <svg
+          viewBox="0 0 926 676"
+          aria-hidden="true"
+          className="absolute -bottom-24 left-24 w-[57.875rem] transform-gpu blur-[118px]"
+        >
+          <path
+            fill="url(#60c3c621-93e0-4a09-a0e6-4c228a0116d8)"
+            fillOpacity=".4"
+            d="m254.325 516.708-90.89 158.331L0 436.427l254.325 80.281 163.691-285.15c1.048 131.759 36.144 345.144 168.149 144.613C751.171 125.508 707.17-93.823 826.603 41.15c95.546 107.978 104.766 294.048 97.432 373.585L685.481 297.694l16.974 360.474-448.13-141.46Z"
+          />
+          <defs>
+            <linearGradient
+              id="60c3c621-93e0-4a09-a0e6-4c228a0116d8"
+              x1="926.392"
+              x2="-109.635"
+              y1=".176"
+              y2="321.024"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="#776FFF" />
+              <stop offset={1} stopColor="#FF4694" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div className="relative mx-auto max-w-7xl py-24 sm:py-32 lg:px-8 lg:py-40">
+        <div className="pl-6 pr-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-24 lg:pr-0 xl:pl-32">
+          <h2 className="text-base font-semibold leading-7 text-indigo-400">
+            Award winning support
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-neutral-300">
-            Incididunt sint fugiat pariatur cupidatat consectetur sit cillum
-            anim id veniam aliqua proident excepteur commodo do ea.
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            We’re here to help
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
+          <p className="mt-6 text-base leading-7 text-gray-300">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas
+            tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim
+            et fermentum, augue. Aliquet amet volutpat quisque ut interdum
+            tincidunt duis.
+          </p>
+          <div className="mt-8">
             <a
               href="#"
-              className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-neutral-900 shadow-sm hover:bg-neutral-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="inline-flex rounded-md bg-white/10 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
-              Get started
-            </a>
-            <a href="#" className="text-sm font-semibold leading-6 text-white">
-              Learn more <span aria-hidden="true">→</span>
+              Visit the help center
             </a>
           </div>
         </div>
       </div>
-      <svg
-        viewBox="0 0 1024 1024"
-        className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]"
-        aria-hidden="true"
-      >
-        <circle
-          cx={512}
-          cy={512}
-          r={512}
-          fill="url(#8d958450-c69f-4251-94bc-4e091a323369)"
-          fillOpacity="0.7"
-        />
-        <defs>
-          <radialGradient id="8d958450-c69f-4251-94bc-4e091a323369">
-            <stop stopColor="#7775D6" />
-            <stop offset={1} stopColor="#E935C1" />
-          </radialGradient>
-        </defs>
-      </svg>
     </div>
   );
 };

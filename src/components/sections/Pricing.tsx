@@ -74,7 +74,7 @@ const Pricing: React.FC = () => {
           <h2 className="text-base font-semibold leading-7 text-violet-400">
             Pricing
           </h2>
-          <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          <p className="mt-2 text-4xl font-bold tracking-tight text-neutral-100 sm:text-5xl">
             Dominate the Market with Tailored Pricing Plans
           </p>
         </div>
@@ -86,7 +86,7 @@ const Pricing: React.FC = () => {
           <RadioGroup
             value={frequency}
             onChange={setFrequency}
-            className="grid grid-cols-2 gap-x-1 rounded-full bg-white/5 p-1 text-center text-xs font-semibold leading-5 text-white"
+            className="grid grid-cols-2 gap-x-1 rounded-full bg-neutral-100/5 p-1 text-center text-xs font-semibold leading-5 text-neutral-100"
           >
             <RadioGroup.Label className="sr-only">
               Payment frequency
@@ -113,20 +113,20 @@ const Pricing: React.FC = () => {
               key={tier.id}
               className={classNames(
                 tier.mostPopular
-                  ? "bg-white/10 ring-2 ring-violet-500"
-                  : "ring-1 ring-white/10 bg-white/5",
+                  ? "bg-neutral-100/10 ring-2 ring-violet-500"
+                  : "ring-1 ring-neutral-100/10 bg-neutral-100/5",
                 "rounded-3xl p-8 xl:p-10"
               )}
             >
               <div className="flex items-center justify-between gap-x-4">
                 <h3
                   id={tier.id}
-                  className="text-2xl font-semibold leading-8 text-white"
+                  className="text-2xl font-semibold leading-8 text-neutral-100"
                 >
                   {tier.name}
                 </h3>
                 {tier.mostPopular ? (
-                  <p className="rounded-full bg-violet-500 px-2.5 py-1 text-xs font-semibold leading-5 text-white">
+                  <p className="rounded-full bg-violet-500 px-2.5 py-1 text-xs font-semibold leading-5 text-neutral-100">
                     Most popular
                   </p>
                 ) : null}
@@ -135,7 +135,7 @@ const Pricing: React.FC = () => {
                 {tier.description}
               </p>
               <p className="mt-6 flex items-baseline gap-x-1">
-                <span className="text-4xl font-bold tracking-tight text-white">
+                <span className="text-4xl font-bold tracking-tight text-neutral-100">
                   ${tier.price[frequency.value]}
                 </span>
                 <span className="text-sm font-semibold leading-6 text-neutral-300">
@@ -147,8 +147,8 @@ const Pricing: React.FC = () => {
                 aria-describedby={tier.id}
                 className={classNames(
                   tier.mostPopular
-                    ? "bg-violet-500 text-white shadow-sm hover:bg-violet-400 focus-visible:outline-violet-500"
-                    : "bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white",
+                    ? "bg-violet-500 text-neutral-100 shadow-sm hover:bg-violet-400 focus-visible:outline-violet-500"
+                    : "bg-neutral-100/10 text-neutral-100 hover:bg-neutral-100/20 focus-visible:outline-neutral-100",
                   "mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                 )}
               >
@@ -161,7 +161,7 @@ const Pricing: React.FC = () => {
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex gap-x-3">
                     <CheckIcon
-                      className="h-6 w-5 flex-none text-white"
+                      className="h-6 w-5 flex-none text-neutral-100"
                       aria-hidden="true"
                     />
                     {feature}

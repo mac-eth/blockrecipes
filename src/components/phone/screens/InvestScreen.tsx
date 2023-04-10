@@ -21,7 +21,7 @@ const InvestScreen = ({
       <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
         <AppScreen.Title>Buy $LA</AppScreen.Title>
         <AppScreen.Subtitle>
-          <span className="text-white">$34.28</span> per share
+          <span className="text-neutral-100">$34.28</span> per share
         </AppScreen.Subtitle>
       </MotionAppScreenHeader>
       <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
@@ -58,7 +58,7 @@ const InvestScreen = ({
                 </div>
               </div>
             ))}
-            <div className="rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-white">
+            <div className="rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-neutral-100">
               Buy shares
             </div>
           </div>

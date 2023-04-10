@@ -22,7 +22,7 @@ const InviteScreen = ({
       <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
         <AppScreen.Title>Invite people</AppScreen.Title>
         <AppScreen.Subtitle>
-          Get tips <span className="text-white">5s sooner</span> for every
+          Get tips <span className="text-neutral-100">5s sooner</span> for every
           invite.
         </AppScreen.Subtitle>
       </MotionAppScreenHeader>
@@ -41,7 +41,7 @@ const InviteScreen = ({
               </div>
             ))}
           </div>
-          <div className="mt-6 rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-white">
+          <div className="mt-6 rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-neutral-100">
             Invite person
           </div>
         </div>

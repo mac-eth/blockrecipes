@@ -19,7 +19,6 @@ export default function Home() {
       <CTA />
       <Testimonials />
       <Pricing />
-      <FAQ />
       <Newsletter />
       <Footer />
     </div>

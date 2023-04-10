@@ -34,7 +34,7 @@ AppScreen.Header = forwardRef(function AppScreenHeader(
   ref: Ref<HTMLDivElement>
 ) {
   return (
-    <div ref={ref} className="mt-6 px-4 text-white">
+    <div ref={ref} className="mt-6 px-4 text-neutral-100">
       {children}
     </div>
   );
@@ -47,7 +47,7 @@ AppScreen.Title = forwardRef(function AppScreenTitle(
   ref: React.Ref<HTMLDivElement>
 ) {
   return (
-    <div ref={ref} className="text-2xl text-white">
+    <div ref={ref} className="text-2xl text-neutral-100">
       {props.children}
     </div>
   );
@@ -71,7 +71,7 @@ AppScreen.Body = forwardRef<
   return (
     <div
       ref={ref}
-      className={clsx("mt-6 flex-auto rounded-t-2xl bg-white", className)}
+      className={clsx("mt-6 flex-auto rounded-t-2xl bg-neutral-100", className)}
     >
       {children}
     </div>

@@ -88,7 +88,7 @@ const FeaturesDesktop: React.FC = () => {
             )}
             <div className="relative z-10 p-8">
               <feature.icon className="h-8 w-8" />
-              <h3 className="mt-6 text-lg font-semibold text-white">
+              <h3 className="mt-6 text-lg font-semibold text-neutral-100">
                 <Tab className="text-left [&:not(:focus-visible)]:focus:outline-none">
                   <span className="absolute inset-0 rounded-2xl" />
                   {feature.name}
@@ -195,7 +195,7 @@ const FeaturesMobile: React.FC = () => {
               </PhoneFrame>
               <div className="absolute inset-x-0 bottom-0 bg-neutral-800/95 p-6 backdrop-blur sm:p-10">
                 <feature.icon className="h-8 w-8" />
-                <h3 className="mt-6 text-sm font-semibold text-white sm:text-lg">
+                <h3 className="mt-6 text-sm font-semibold text-neutral-100 sm:text-lg">
                   {feature.name}
                 </h3>
                 <p className="mt-2 text-sm text-neutral-400">
@@ -243,7 +243,7 @@ const PrimaryFeatures: React.FC = () => {
           <h2 className="text-base font-semibold leading-7 text-violet-400">
             Instant, Real-time Alerts
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <p className="mt-2 text-3xl font-bold tracking-tight text-neutral-100 sm:text-4xl">
             Never Miss a Trading Opportunity
           </p>
           <p className="mt-6 text-lg leading-8 text-neutral-300">

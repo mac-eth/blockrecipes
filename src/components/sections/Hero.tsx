@@ -6,9 +6,9 @@ import Screenshot from "~/assets/project-app-screenshot.png";
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative isolate h-[95vh] overflow-hidden bg-white">
+    <div className="relative isolate h-[95vh] overflow-hidden bg-neutral-100">
       <svg
-        className="absolute inset-0 -z-10 h-full w-full stroke-neutral-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+        className="absolute inset-0 -z-10 h-full w-full stroke-neutral-200 [mask-image:radial-gradient(100%_100%_at_top_right,neutral-100,transparent)]"
         aria-hidden="true"
       >
         <defs>
@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
           <div className="mt-10 flex items-center gap-x-6">
             <a
               href="#"
-              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-neutral-100 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Get started
             </a>
