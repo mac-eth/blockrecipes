@@ -5,9 +5,9 @@ import React, { Fragment, useEffect, useRef, useState } from "react";
 
 import CircleBackground from "~/components/phone/CircleBackground";
 import Container from "~/components/layout/Container";
-import DeviceNotificationIcon from "~/components/phone/icons/DeviceNotificationIcon";
-import DeviceTouchIcon from "~/components/phone/icons/DeviceTouchIcon";
-import DeviceUserIcon from "~/components/phone/icons/DeviceUserIcon";
+import DeviceNotificationIcon from "~/components/icons/DeviceNotificationIcon";
+import DeviceTouchIcon from "~/components/icons/DeviceTouchIcon";
+import DeviceUserIcon from "~/components/icons/DeviceUserIcon";
 import InvestScreen from "~/components/phone/screens/InvestScreen";
 import InviteScreen from "~/components/phone/screens/InviteScreen";
 import PhoneFrame from "~/components/phone/PhoneFrame";
@@ -77,12 +77,12 @@ const FeaturesDesktop: React.FC = () => {
         {features.map((feature, featureIndex) => (
           <div
             key={feature.name}
-            className="relative rounded-2xl transition-colors hover:bg-gray-800/30"
+            className="relative rounded-2xl transition-colors hover:bg-neutral-800/30"
           >
             {featureIndex === selectedIndex && (
               <motion.div
                 layoutId="activeBackground"
-                className="absolute inset-0 bg-gray-800"
+                className="absolute inset-0 bg-neutral-800"
                 initial={{ borderRadius: 16 }}
               />
             )}
@@ -94,7 +94,7 @@ const FeaturesDesktop: React.FC = () => {
                   {feature.name}
                 </Tab>
               </h3>
-              <p className="mt-2 text-sm text-gray-400">
+              <p className="mt-2 text-sm text-neutral-400">
                 {feature.description}
               </p>
             </div>
@@ -183,7 +183,7 @@ const FeaturesMobile: React.FC = () => {
             ref={(ref) => (slideRefs.current[featureIndex] = ref)}
             className="w-full flex-none snap-center px-4 sm:px-6"
           >
-            <div className="relative transform overflow-hidden rounded-2xl bg-gray-800 px-5 py-6">
+            <div className="relative transform overflow-hidden rounded-2xl bg-neutral-800 px-5 py-6">
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                 <CircleBackground
                   color="#13B5C8"
@@ -193,12 +193,12 @@ const FeaturesMobile: React.FC = () => {
               <PhoneFrame className="relative mx-auto w-full max-w-[366px]">
                 <feature.screen />
               </PhoneFrame>
-              <div className="absolute inset-x-0 bottom-0 bg-gray-800/95 p-6 backdrop-blur sm:p-10">
+              <div className="absolute inset-x-0 bottom-0 bg-neutral-800/95 p-6 backdrop-blur sm:p-10">
                 <feature.icon className="h-8 w-8" />
                 <h3 className="mt-6 text-sm font-semibold text-white sm:text-lg">
                   {feature.name}
                 </h3>
-                <p className="mt-2 text-sm text-gray-400">
+                <p className="mt-2 text-sm text-neutral-400">
                   {feature.description}
                 </p>
               </div>
@@ -213,7 +213,7 @@ const FeaturesMobile: React.FC = () => {
             key={featureIndex}
             className={clsx(
               "relative h-0.5 w-4 rounded-full",
-              featureIndex === activeIndex ? "bg-gray-300" : "bg-gray-500"
+              featureIndex === activeIndex ? "bg-neutral-300" : "bg-neutral-500"
             )}
             aria-label={`Go to slide ${featureIndex + 1}`}
             onClick={() => {
@@ -236,7 +236,7 @@ const PrimaryFeatures: React.FC = () => {
     <section
       id="features"
       aria-label="Features for investing all your money"
-      className="bg-gray-900 py-20 sm:py-32"
+      className="bg-neutral-900 py-20 sm:py-32"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
@@ -246,7 +246,7 @@ const PrimaryFeatures: React.FC = () => {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Never Miss a Trading Opportunity
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
+          <p className="mt-6 text-lg leading-8 text-neutral-300">
             Get ahead in trading with our reliable and efficient alert system,
             delivering instant real-time notifications to ensure you never miss
             an opportunity. Stay informed and seize every trading opportunity

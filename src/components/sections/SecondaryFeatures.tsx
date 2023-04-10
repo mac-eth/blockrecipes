@@ -1,106 +1,88 @@
-import {
-  ArrowPathIcon,
-  CloudArrowUpIcon,
-  Cog6ToothIcon,
-  FingerPrintIcon,
-  LockClosedIcon,
-  ServerIcon,
-} from "@heroicons/react/20/solid";
-
-import AppScreenshot from "~/assets/dark-project-app-screenshot.png";
-import Image from "next/image";
+import Container from "~/components/layout/Container";
+import DeviceArrowIcon from "~/components/icons/DeviceArrowIcon";
+import DeviceCardsIcon from "~/components/icons/DeviceCardsIcon";
+import DeviceChartIcon from "~/components/icons/DeviceChartIcon";
+import DeviceClockIcon from "~/components/icons/DeviceClockIcon";
+import DeviceListIcon from "~/components/icons/DeviceListIcon";
+import DeviceLockIcon from "~/components/icons/DeviceLockIcon";
 import React from "react";
 
 const features = [
   {
-    name: "Push to deploy.",
+    name: "Invest any amount",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.",
-    icon: CloudArrowUpIcon,
+      "Whether it’s $1 or $1,000,000, we can put your money to work for you.",
+    icon: DeviceArrowIcon,
   },
   {
-    name: "SSL certificates.",
+    name: "Build a balanced portfolio",
     description:
-      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
-    icon: LockClosedIcon,
+      "Invest in different industries to find the most opportunities to win huge.",
+    icon: DeviceCardsIcon,
   },
   {
-    name: "Simple queues.",
+    name: "Trade in real-time",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.",
-    icon: ArrowPathIcon,
+      "Get insider tips on big stock moves and act on them within seconds.",
+    icon: DeviceClockIcon,
   },
   {
-    name: "Advanced security.",
+    name: "Profit from your network",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.",
-    icon: FingerPrintIcon,
+      "Invite new insiders to get tips faster and beat even other Pocket users.",
+    icon: DeviceListIcon,
   },
   {
-    name: "Powerful API.",
+    name: "Encrypted and anonymized",
     description:
-      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
-    icon: Cog6ToothIcon,
+      "Cutting-edge security technology that even the NSA doesn’t know about keeps you hidden.",
+    icon: DeviceLockIcon,
   },
   {
-    name: "Database backups.",
+    name: "Portfolio tracking",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. ",
-    icon: ServerIcon,
+      "Watch your investments grow exponentially, leaving other investors in the dust.",
+    icon: DeviceChartIcon,
   },
 ];
 
-const Features: React.FC = () => {
+const SecondaryFeatures: React.FC = () => {
   return (
-    <div className="py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section
+      id="secondary-features"
+      aria-label="Features for building a portfolio"
+      className="py-20 sm:py-32 bg-neutral-100"
+    >
+      <Container>
         <div className="mx-auto max-w-2xl sm:text-center">
-          <h2 className="text-base font-semibold leading-7 text-violet-400">
-            Instant, Real-time Alerts
+          <h2 className="text-3xl font-medium tracking-tight text-gray-900">
+            Now is the time to build your portfolio.
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Never Miss a Trading Opportunity
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Get ahead in trading with our reliable and efficient alert system,
-            delivering instant real-time notifications to ensure you never miss
-            an opportunity. Stay informed and seize every trading opportunity
-            with ease.
+          <p className="mt-2 text-lg text-gray-600">
+            With typical market returns, you have to start young to secure your
+            future. With Pocket, it’s never too late to build your nest egg.
           </p>
         </div>
-      </div>
-      <div className="relative overflow-hidden pt-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <Image
-            src={AppScreenshot}
-            alt="App screenshot"
-            className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-white/10"
-            width={2432}
-            height={1442}
-          />
-          <div className="relative" aria-hidden="true">
-            <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-gray-900 pt-[7%]" />
-          </div>
-        </div>
-      </div>
-      <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
-        <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
+        <ul
+          role="list"
+          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
+        >
           {features.map((feature) => (
-            <div key={feature.name} className="relative pl-9">
-              <dt className="inline font-semibold text-white">
-                <feature.icon
-                  className="absolute left-1 top-1 h-5 w-5 text-violet-500"
-                  aria-hidden="true"
-                />
+            <li
+              key={feature.name}
+              className="rounded-2xl border border-neutral-200 p-8"
+            >
+              <feature.icon className="h-8 w-8" />
+              <h3 className="mt-6 font-semibold text-neutral-900">
                 {feature.name}
-              </dt>{" "}
-              <dd className="inline">{feature.description}</dd>
-            </div>
+              </h3>
+              <p className="mt-2 text-neutral-700">{feature.description}</p>
+            </li>
           ))}
-        </dl>
-      </div>
-    </div>
+        </ul>
+      </Container>
+    </section>
   );
 };
 
-export default Features;
+export default SecondaryFeatures;

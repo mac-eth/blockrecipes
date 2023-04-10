@@ -50,10 +50,10 @@ const InvestScreen = ({
             ].map((item) => (
               <div
                 key={item.label}
-                className="flex justify-between border-b border-gray-100 pb-4"
+                className="flex justify-between border-b border-neutral-100 pb-4"
               >
-                <div className="text-sm text-gray-500">{item.label}</div>
-                <div className="text-sm font-semibold text-gray-900">
+                <div className="text-sm text-neutral-500">{item.label}</div>
+                <div className="text-sm font-semibold text-neutral-900">
                   {item.value}
                 </div>
               </div>

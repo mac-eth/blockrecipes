@@ -34,8 +34,8 @@ const InviteScreen = ({
               { label: "Email address", value: "awiggin@chase.com" },
             ].map((field) => (
               <div key={field.label}>
-                <div className="text-sm text-gray-500">{field.label}</div>
-                <div className="mt-2 border-b border-gray-200 pb-2 text-sm text-gray-900">
+                <div className="text-sm text-neutral-500">{field.label}</div>
+                <div className="mt-2 border-b border-neutral-200 pb-2 text-sm text-neutral-900">
                   {field.value}
                 </div>
               </div>

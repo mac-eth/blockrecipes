@@ -78,7 +78,7 @@ const Pricing: React.FC = () => {
             Dominate the Market with Tailored Pricing Plans
           </p>
         </div>
-        <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">
+        <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-neutral-300">
           Choose an affordable plan that’s packed with the best features
           tailored for your trading level. No hidden fees, no surprises.
         </p>
@@ -131,14 +131,14 @@ const Pricing: React.FC = () => {
                   </p>
                 ) : null}
               </div>
-              <p className="mt-4 text-sm leading-6 text-gray-300">
+              <p className="mt-4 text-sm leading-6 text-neutral-300">
                 {tier.description}
               </p>
               <p className="mt-6 flex items-baseline gap-x-1">
                 <span className="text-4xl font-bold tracking-tight text-white">
                   ${tier.price[frequency.value]}
                 </span>
-                <span className="text-sm font-semibold leading-6 text-gray-300">
+                <span className="text-sm font-semibold leading-6 text-neutral-300">
                   {frequency.priceSuffix}
                 </span>
               </p>
@@ -156,7 +156,7 @@ const Pricing: React.FC = () => {
               </a>
               <ul
                 role="list"
-                className="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10"
+                className="mt-8 space-y-3 text-sm leading-6 text-neutral-300 xl:mt-10"
               >
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex gap-x-3">

@@ -1,8 +1,8 @@
 import React, { HTMLAttributes, ReactNode, Ref, forwardRef } from "react";
 
-import LogoIcon from "~/components/phone/icons/LogoIcon";
-import MenuIcon from "~/components/phone/icons/MenuIcon";
-import UserIcon from "~/components/phone/icons/UserIcon";
+import LogoIcon from "~/components/icons/LogoIcon";
+import MenuIcon from "~/components/icons/MenuIcon";
+import UserIcon from "~/components/icons/UserIcon";
 import clsx from "clsx";
 
 const AppScreen = ({
@@ -58,7 +58,7 @@ AppScreen.Subtitle = forwardRef(function AppScreenSubtitle(
   ref: Ref<HTMLDivElement>
 ) {
   return (
-    <div ref={ref} className="text-sm text-gray-500">
+    <div ref={ref} className="text-sm text-neutral-500">
       {children}
     </div>
   );

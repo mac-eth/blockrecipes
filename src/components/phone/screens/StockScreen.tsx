@@ -36,7 +36,7 @@ const StocksScreen = ({
         <AppScreen.Subtitle>March 9, 2022</AppScreen.Subtitle>
       </MotionAppScreenHeader>
       <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
-        <div className="divide-y divide-gray-100">
+        <div className="divide-y divide-neutral-100">
           {[
             {
               name: "Laravel",
@@ -102,11 +102,11 @@ const StocksScreen = ({
               >
                 <stock.logo className="h-10 w-10" />
               </div>
-              <div className="flex-auto text-sm text-gray-900">
+              <div className="flex-auto text-sm text-neutral-900">
                 {stock.name}
               </div>
               <div className="flex-none text-right">
-                <div className="text-sm font-medium text-gray-900">
+                <div className="text-sm font-medium text-neutral-900">
                   {stock.price}
                 </div>
                 <div
@@ -114,7 +114,7 @@ const StocksScreen = ({
                     "text-xs leading-5",
                     stock.change.startsWith("+")
                       ? "text-cyan-500"
-                      : "text-gray-500"
+                      : "text-neutral-500"
                   )}
                 >
                   {stock.change}
