@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
           <div className="mt-24 sm:mt-32 lg:mt-16">
             <a href="#" className="inline-flex space-x-6">
-              <span className="rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-indigo-600/10">
+              <span className="rounded-full bg-violet-600/10 px-3 py-1 text-sm font-semibold leading-6 text-violet-600 ring-1 ring-inset ring-violet-600/10">
                 New Update
               </span>
               <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-neutral-600">
@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
           <div className="mt-10 flex items-center gap-x-6">
             <a
               href="#"
-              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-neutral-100 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="rounded-md bg-violet-600 px-3.5 py-2.5 text-sm font-semibold text-neutral-100 shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600"
             >
               Get started
             </a>

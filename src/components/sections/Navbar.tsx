@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
         <div className="flex flex-1 items-center justify-end gap-x-6">
           <a
             href="#"
-            className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-neutral-100 shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600 duration-300"
+            className="rounded-md bg-violet-600 px-3 py-2 text-sm font-semibold text-neutral-100 shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600 duration-300"
           >
             Dashboard
           </a>
