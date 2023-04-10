@@ -55,10 +55,10 @@ const SecondaryFeatures: React.FC = () => {
     >
       <Container>
         <div className="mx-auto max-w-2xl sm:text-center">
-          <h2 className="text-3xl font-medium tracking-tight text-gray-900">
+          <h2 className="text-3xl font-medium tracking-tight text-neutral-900">
             Now is the time to build your portfolio.
           </h2>
-          <p className="mt-2 text-lg text-gray-600">
+          <p className="mt-2 text-lg text-neutral-600">
             With typical market returns, you have to start young to secure your
             future. With Pocket, it’s never too late to build your nest egg.
           </p>

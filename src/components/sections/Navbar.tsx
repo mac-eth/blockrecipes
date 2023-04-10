@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-neutral-100"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-neutral-700"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>

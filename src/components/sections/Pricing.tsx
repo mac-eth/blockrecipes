@@ -113,8 +113,8 @@ const Pricing: React.FC = () => {
               key={tier.id}
               className={classNames(
                 tier.mostPopular
-                  ? "bg-white/5 ring-2 ring-violet-500"
-                  : "ring-1 ring-white/10",
+                  ? "bg-white/10 ring-2 ring-violet-500"
+                  : "ring-1 ring-white/10 bg-white/5",
                 "rounded-3xl p-8 xl:p-10"
               )}
             >
