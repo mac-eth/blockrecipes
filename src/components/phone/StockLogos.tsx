@@ -1,8 +1,4 @@
-import { SVGProps } from "react";
-
-export function LaravelLogo(
-  props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
-) {
+export const LaravelLogo = (props: { className?: string }) => {
   return (
     <svg viewBox="0 0 40 40" fill="#fff" aria-hidden="true" {...props}>
       <path
@@ -12,11 +8,9 @@ export function LaravelLogo(
       />
     </svg>
   );
-}
+};
 
-export function TupleLogo(
-  props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
-) {
+export const TupleLogo = (props: { className?: string }) => {
   return (
     <svg viewBox="0 0 40 40" fill="#fff" aria-hidden="true" {...props}>
       <path
@@ -26,22 +20,18 @@ export function TupleLogo(
       />
     </svg>
   );
-}
+};
 
-export function TransistorLogo(
-  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
-) {
+export const TransistorLogo = (props: { className?: string }) => {
   return (
     <svg viewBox="0 0 40 40" fill="#fff" aria-hidden="true" {...props}>
       <path d="M20 32c-6.617 0-12-5.383-12-12S13.383 8 20 8s12 5.383 12 12-5.383 12-12 12Zm0-22.4C14.267 9.6 9.6 14.266 9.6 20S14.267 30.4 20 30.4c5.734 0 10.4-4.666 10.4-10.4S25.734 9.6 20 9.6Z" />
       <path d="M19.434 27.749c.15.15.354.234.566.235.433 0 .8-.368.8-.8V12.815a.8.8 0 0 0-1.6 0v14.368c0 .212.084.415.234.565ZM12.833 20.8h3.833a.802.802 0 0 0 .802-.8.8.8 0 0 0-.801-.8h-3.834c-.45 0-.8.35-.8.8a.8.8 0 0 0 .8.8ZM23.333 20.8h3.85c.433 0 .783-.35.783-.8a.799.799 0 0 0-.8-.8h-3.833c-.45 0-.8.35-.8.8a.8.8 0 0 0 .8.8Z" />
     </svg>
   );
-}
+};
 
-export function DiageoLogo(
-  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
-) {
+export const DiageoLogo = (props: { className?: string }) => {
   return (
     <svg
       viewBox="0 0 40 40"
@@ -57,21 +47,17 @@ export function DiageoLogo(
       <path d="M25 24a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z" />
     </svg>
   );
-}
+};
 
-export function StaticKitLogo(
-  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
-) {
+export const StaticKitLogo = (props: { className?: string }) => {
   return (
     <svg viewBox="0 0 40 40" fill="#fff" aria-hidden="true" {...props}>
       <path d="m26.068 10.555-11.49 13.089L12 21.089 23.489 8l2.58 2.555ZM28 18.91 16.512 32l-2.579-2.555 11.489-13.089L28 18.911Z" />
     </svg>
   );
-}
+};
 
-export function StatamicLogo(
-  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
-) {
+export const StatamicLogo = (props: { className?: string }) => {
   return (
     <svg viewBox="0 0 40 40" fill="#fff" aria-hidden="true" {...props}>
       <path
@@ -81,11 +67,9 @@ export function StatamicLogo(
       />
     </svg>
   );
-}
+};
 
-export function MirageLogo(
-  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
-) {
+export const MirageLogo = (props: { className?: string }) => {
   return (
     <svg viewBox="0 0 40 40" fill="#fff" aria-hidden="true" {...props}>
       <path
@@ -96,11 +80,9 @@ export function MirageLogo(
       <path d="M12.069 26.469c-.354 0-.641.289-.641.646 0 .358.287.646.64.646h14.139c.354 0 .641-.29.641-.646a.644.644 0 0 0-.64-.646h-14.14Zm4.928 3.236a.645.645 0 0 0-.642.648c0 .357.288.647.642.647h4.282c.355 0 .643-.29.643-.647a.645.645 0 0 0-.643-.648h-4.282Z" />
     </svg>
   );
-}
+};
 
-export function ReversableLogo(
-  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
-) {
+export const ReversableLogo = (props: { className?: string }) => {
   return (
     <svg
       viewBox="0 0 40 40"
@@ -115,4 +97,4 @@ export function ReversableLogo(
       <path d="M15 26v-5.25m0 0V16a2 2 0 0 1 2-2h4.21c.968 0 1.37 1.24.587 1.809L15 20.75Zm0 0L25 26" />
     </svg>
   );
-}
+};
