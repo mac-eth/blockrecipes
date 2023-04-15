@@ -1,7 +1,7 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
-import React, { Fragment, useEffect, useRef, useState } from "react";
+import {AnimatePresence, motion} from "framer-motion";
+import React, {Fragment, useEffect, useRef, useState} from "react";
 
 import CircleBackground from "~/components/phone/CircleBackground";
 import Container from "~/components/layout/Container";
@@ -12,31 +12,31 @@ import InvestScreen from "~/components/phone/screens/InvestScreen";
 import InviteScreen from "~/components/phone/screens/InviteScreen";
 import PhoneFrame from "~/components/phone/PhoneFrame";
 import StocksScreen from "~/components/phone/screens/StockScreen";
-import { Tab } from "@headlessui/react";
+import {Tab} from "@headlessui/react";
 import clsx from "clsx";
-import { useDebouncedCallback } from "use-debounce";
+import {useDebouncedCallback} from "use-debounce";
 
 const features = [
   {
-    name: "Invite friends for better returns",
-    description:
-      "For every friend you invite to Pocket, you get insider notifications 5 seconds sooner. And it’s 10 seconds if you invite an insider.",
-    icon: DeviceUserIcon,
-    screen: InviteScreen,
-  },
-  {
-    name: "Notifications on stock dips",
+    name: "Worlds Fastest Alerts",
     description:
       "Get a push notification every time we find out something that’s going to lower the share price on your holdings so you can sell before the information hits the public markets.",
     icon: DeviceNotificationIcon,
     screen: StocksScreen,
   },
   {
-    name: "Invest what you want",
+    name: "Every Transaction at your Fingertips",
     description:
       "We hide your stock purchases behind thousands of anonymous trading accounts, so suspicious activity can never be traced back to you.",
     icon: DeviceTouchIcon,
     screen: InvestScreen,
+  },
+  {
+    name: "Customized just for You",
+    description:
+      "Customize your own blockchain notifications so that they are specific to you and your favourite projects.",
+    icon: DeviceUserIcon,
+    screen: InviteScreen,
   },
 ];
 
@@ -62,7 +62,7 @@ const FeaturesDesktop: React.FC = () => {
       setChangeCount((changeCount) => changeCount + 1);
     },
     100,
-    { leading: true }
+    {leading: true}
   );
 
   return (
@@ -83,13 +83,13 @@ const FeaturesDesktop: React.FC = () => {
               <motion.div
                 layoutId="activeBackground"
                 className="absolute inset-0 bg-neutral-800"
-                initial={{ borderRadius: 16 }}
+                initial={{borderRadius: 16}}
               />
             )}
             <div className="relative z-10 p-8">
               <feature.icon className="h-8 w-8" />
-              <h3 className="mt-6 text-lg font-semibold text-neutral-100">
-                <Tab className="text-left [&:not(:focus-visible)]:focus:outline-none">
+              <h3 className="mt-6 text-lg font-semibold text-neutral-50">
+                <Tab className="text-left focus:outline-none">
                   <span className="absolute inset-0 rounded-2xl" />
                   {feature.name}
                 </Tab>
@@ -107,20 +107,17 @@ const FeaturesDesktop: React.FC = () => {
         </div>
         <PhoneFrame className="z-10 mx-auto w-full max-w-[366px]">
           <Tab.Panels as={Fragment}>
-            <AnimatePresence
-              initial={false}
-              custom={{ isForwards, changeCount }}
-            >
+            <AnimatePresence initial={false} custom={{isForwards, changeCount}}>
               {features.map((feature, featureIndex) =>
                 selectedIndex === featureIndex ? (
                   <Tab.Panel
                     static
                     key={feature.name + changeCount}
-                    className="col-start-1 row-start-1 flex focus:outline-offset-[32px] [&:not(:focus-visible)]:focus:outline-none"
+                    className="col-start-1 row-start-1 flex focus:outline-none"
                   >
                     <feature.screen
                       animated
-                      custom={{ isForwards, changeCount }}
+                      custom={{isForwards, changeCount}}
                     />
                   </Tab.Panel>
                 ) : null
@@ -195,7 +192,7 @@ const FeaturesMobile: React.FC = () => {
               </PhoneFrame>
               <div className="absolute inset-x-0 bottom-0 bg-neutral-800/95 p-6 backdrop-blur sm:p-10">
                 <feature.icon className="h-8 w-8" />
-                <h3 className="mt-6 text-sm font-semibold text-neutral-100 sm:text-lg">
+                <h3 className="mt-6 text-sm font-semibold text-neutral-50 sm:text-lg">
                   {feature.name}
                 </h3>
                 <p className="mt-2 text-sm text-neutral-400">
@@ -240,10 +237,10 @@ const PrimaryFeatures: React.FC = () => {
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
-          <h2 className="text-base font-semibold leading-7 text-violet-400">
+          <h2 className="text-base font-semibold leading-7 text-red-400">
             Instant, Real-time Alerts
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-neutral-100 sm:text-4xl">
+          <p className="mt-2 text-3xl font-bold tracking-tight text-neutral-50 sm:text-4xl">
             Never Miss a Trading Opportunity
           </p>
           <p className="mt-6 text-lg leading-8 text-neutral-300">

@@ -1,7 +1,7 @@
 import AppScreen from "~/components/phone/AppScreen";
 import bodyAnimation from "~/components/phone/animations/BodyAnimation";
 import headerAnimation from "~/components/phone/animations/HeaderAnimations";
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 
 const MotionAppScreenHeader = motion(AppScreen.Header);
 const MotionAppScreenBody = motion(AppScreen.Body);
@@ -21,14 +21,14 @@ const InvestScreen = ({
       <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
         <AppScreen.Title>Buy $LA</AppScreen.Title>
         <AppScreen.Subtitle>
-          <span className="text-neutral-100">$34.28</span> per share
+          <span className="text-neutral-50">$34.28</span> per share
         </AppScreen.Subtitle>
       </MotionAppScreenHeader>
-      <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
+      <MotionAppScreenBody {...(animated ? {...bodyAnimation, custom} : {})}>
         <div className="px-4 py-6">
           <div className="space-y-4">
             {[
-              { label: "Number of shares", value: "100" },
+              {label: "Number of shares", value: "100"},
               {
                 label: "Current market price",
                 value: (
@@ -46,11 +46,11 @@ const InvestScreen = ({
                   </div>
                 ),
               },
-              { label: "Estimated cost", value: "$3,428.00" },
+              {label: "Estimated cost", value: "$3,428.00"},
             ].map((item) => (
               <div
                 key={item.label}
-                className="flex justify-between border-b border-neutral-100 pb-4"
+                className="flex justify-between border-b border-neutral-50 pb-4"
               >
                 <div className="text-sm text-neutral-500">{item.label}</div>
                 <div className="text-sm font-semibold text-neutral-900">
@@ -58,7 +58,7 @@ const InvestScreen = ({
                 </div>
               </div>
             ))}
-            <div className="rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-neutral-100">
+            <div className="rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-neutral-50">
               Buy shares
             </div>
           </div>

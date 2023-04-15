@@ -2,7 +2,7 @@ import AppScreen from "~/components/phone/AppScreen";
 import React from "react";
 import bodyAnimation from "~/components/phone/animations/BodyAnimation";
 import headerAnimation from "~/components/phone/animations/HeaderAnimations";
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 
 const MotionAppScreenHeader = motion(AppScreen.Header);
 const MotionAppScreenBody = motion(AppScreen.Body);
@@ -22,16 +22,16 @@ const InviteScreen = ({
       <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
         <AppScreen.Title>Invite people</AppScreen.Title>
         <AppScreen.Subtitle>
-          Get tips <span className="text-neutral-100">5s sooner</span> for every
+          Get tips <span className="text-neutral-50">5s sooner</span> for every
           invite.
         </AppScreen.Subtitle>
       </MotionAppScreenHeader>
-      <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
+      <MotionAppScreenBody {...(animated ? {...bodyAnimation, custom} : {})}>
         <div className="px-4 py-6">
           <div className="space-y-6">
             {[
-              { label: "Full name", value: "Albert H. Wiggin" },
-              { label: "Email address", value: "awiggin@chase.com" },
+              {label: "Full name", value: "Albert H. Wiggin"},
+              {label: "Email address", value: "awiggin@chase.com"},
             ].map((field) => (
               <div key={field.label}>
                 <div className="text-sm text-neutral-500">{field.label}</div>
@@ -41,7 +41,7 @@ const InviteScreen = ({
               </div>
             ))}
           </div>
-          <div className="mt-6 rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-neutral-100">
+          <div className="mt-6 rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-neutral-50">
             Invite person
           </div>
         </div>

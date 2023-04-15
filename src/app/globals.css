@@ -4,6 +4,6 @@
 
 @layer base {
   :root {
-    @apply bg-neutral-900 text-white;
+    @apply bg-neutral-900 text-neutral-50;
   }
 }

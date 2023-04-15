@@ -1,17 +1,17 @@
 "use client";
 
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import React, { useEffect, useState } from "react";
+import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline";
+import React, {useEffect, useState} from "react";
 
-import { Dialog } from "@headlessui/react";
+import {Dialog} from "@headlessui/react";
 import Image from "next/image";
 import Logo from "~/assets/mark.svg";
 
 const navigation = [
-  { name: "Pricing", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "About", href: "#" },
-  { name: "Guide", href: "#" },
+  {name: "Pricing", href: "#"},
+  {name: "Features", href: "#"},
+  {name: "About", href: "#"},
+  {name: "Guide", href: "#"},
 ];
 
 const Navbar: React.FC = () => {
@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
         <div className="flex flex-1 items-center justify-end gap-x-6">
           <a
             href="#"
-            className="rounded-md bg-violet-600 px-3 py-2 text-sm font-semibold text-neutral-100 shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600 duration-300"
+            className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-neutral-50 shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 duration-300"
           >
             Dashboard
           </a>
@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-neutral-100 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-neutral-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-neutral-50 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-neutral-900/10">
           <div className="flex items-center gap-x-6">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
             </a>
             <a
               href="#"
-              className="ml-auto rounded-md bg-violet-600 px-3 py-2 text-sm font-semibold text-neutral-100 shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600"
+              className="ml-auto rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-neutral-50 shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
             >
               Dashboard
             </a>

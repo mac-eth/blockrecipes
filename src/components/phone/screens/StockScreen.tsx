@@ -14,7 +14,7 @@ import React from "react";
 import bodyAnimation from "~/components/phone/animations/BodyAnimation";
 import clsx from "clsx";
 import headerAnimation from "~/components/phone/animations/HeaderAnimations";
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 
 const MotionAppScreenHeader = motion(AppScreen.Header);
 const MotionAppScreenBody = motion(AppScreen.Body);
@@ -35,8 +35,8 @@ const StocksScreen = ({
         <AppScreen.Title>Stocks</AppScreen.Title>
         <AppScreen.Subtitle>March 9, 2022</AppScreen.Subtitle>
       </MotionAppScreenHeader>
-      <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
-        <div className="divide-y divide-neutral-100">
+      <MotionAppScreenBody {...(animated ? {...bodyAnimation, custom} : {})}>
+        <div className="divide-y divide-neutral-50">
           {[
             {
               name: "Laravel",
@@ -98,7 +98,7 @@ const StocksScreen = ({
             <div key={stock.name} className="flex items-center gap-4 px-4 py-3">
               <div
                 className="flex-none rounded-full"
-                style={{ backgroundColor: stock.color }}
+                style={{backgroundColor: stock.color}}
               >
                 <stock.logo className="h-10 w-10" />
               </div>

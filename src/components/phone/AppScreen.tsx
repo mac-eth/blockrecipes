@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, ReactNode, Ref, forwardRef } from "react";
+import React, {HTMLAttributes, ReactNode, Ref, forwardRef} from "react";
 
 import LogoIcon from "~/components/icons/LogoIcon";
 import MenuIcon from "~/components/icons/MenuIcon";
@@ -34,7 +34,7 @@ AppScreen.Header = forwardRef(function AppScreenHeader(
   ref: Ref<HTMLDivElement>
 ) {
   return (
-    <div ref={ref} className="mt-6 px-4 text-neutral-100">
+    <div ref={ref} className="mt-6 px-4 text-neutral-50">
       {children}
     </div>
   );
@@ -47,14 +47,14 @@ AppScreen.Title = forwardRef(function AppScreenTitle(
   ref: React.Ref<HTMLDivElement>
 ) {
   return (
-    <div ref={ref} className="text-2xl text-neutral-100">
+    <div ref={ref} className="text-2xl text-neutral-50">
       {props.children}
     </div>
   );
 });
 
 AppScreen.Subtitle = forwardRef(function AppScreenSubtitle(
-  { children }: { children: ReactNode },
+  {children}: {children: ReactNode},
   ref: Ref<HTMLDivElement>
 ) {
   return (
@@ -66,12 +66,12 @@ AppScreen.Subtitle = forwardRef(function AppScreenSubtitle(
 
 AppScreen.Body = forwardRef<
   HTMLDivElement,
-  HTMLAttributes<HTMLDivElement> & { children?: React.ReactNode }
->(function AppScreenBody({ children, className }, ref) {
+  HTMLAttributes<HTMLDivElement> & {children?: React.ReactNode}
+>(function AppScreenBody({children, className}, ref) {
   return (
     <div
       ref={ref}
-      className={clsx("mt-6 flex-auto rounded-t-2xl bg-neutral-100", className)}
+      className={clsx("mt-6 flex-auto rounded-t-2xl bg-neutral-50", className)}
     >
       {children}
     </div>

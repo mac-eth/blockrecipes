@@ -1,8 +1,8 @@
 "use client";
 
-import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/react/24/outline";
+import {MinusSmallIcon, PlusSmallIcon} from "@heroicons/react/24/outline";
 
-import { Disclosure } from "@headlessui/react";
+import {Disclosure} from "@headlessui/react";
 
 const faqs = [
   {
@@ -34,7 +34,7 @@ const faqs = [
 
 const FAQ = () => {
   return (
-    <div className="bg-neutral-100">
+    <div className="bg-neutral-50">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
         <div className="mx-auto max-w-4xl divide-y divide-neutral-900/10">
           <h2 className="text-2xl font-bold leading-10 tracking-tight text-neutral-900">
@@ -43,7 +43,7 @@ const FAQ = () => {
           <dl className="mt-10 space-y-6 divide-y divide-neutral-900/10">
             {faqs.map((faq) => (
               <Disclosure as="div" key={faq.question} className="pt-6">
-                {({ open }) => (
+                {({open}) => (
                   <>
                     <dt>
                       <Disclosure.Button className="flex w-full items-start justify-between text-left text-neutral-900">
